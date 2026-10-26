@@ -35,7 +35,9 @@ CI runs the tests and uploads SpotBugs results to GitHub code scanning.
 
 ## Database configuration
 
-The project uses MySQL Connector/J 9.7.0, matching the driver in the pinned nixpkgs. Set these environment variables before using the database connection:
+The project uses MySQL Connector/J 9.7.0, matching the driver in the pinned nixpkgs. Copy `.env.example` to `.env` and fill in your MySQL credentials. If you use direnv, run `direnv allow` to load the Nix shell and `.env` when entering the directory.
+
+Otherwise, set the environment variables in your shell or IDE before using the database connection:
 
 ```sh
 export DENTALSOFT_DB_URL="jdbc:mysql://localhost:3306/dentalsoft"

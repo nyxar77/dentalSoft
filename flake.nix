@@ -15,6 +15,7 @@
           default = pkgs.mkShell {
             packages = [ pkgs.jdk25 pkgs.maven ];
             JAVA_HOME = pkgs.jdk25.home;
+            DENTALSOFT_ENV = "development";
           };
         });
     };
